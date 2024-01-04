@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package soil;
+
+service soilService{
+rpc getData(Temp;Humidity;drainage)returns (stream soilResponse){}
+}
+message TempRequest{
+}
+
+message tempResponse{
+string soilTempreture=1;
+unit32 degree=2;
+uint32 number=3;
+}
+
+message hunidityRequest{
+}
+
+message humidityResponse{
+string Location1;
+unit32 waterContent=2;
+uint32 number=3;
+}
+
+
+message drainageRequest{
+}
+
+message drainageResponse{
+string =location;
+unit32 depth=2;
+uint32 amount=3;
+}
